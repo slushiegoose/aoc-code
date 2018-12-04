@@ -10,10 +10,11 @@ for x in inputt:
     for l in range(0, length):
         for w in range(0, width):
             cos = [coordinates[0]+l,coordinates[1]+w]
-            if "{},{}".format(cos[0],cos[1]) in coordinates_used:
-                coordinates_used["{},{}".format(cos[0],cos[1])]+=1
+            string = "({},{})".format(cos[0],cos[1])
+            if string in coordinates_used:
+                coordinates_used[string]+=1
             else:
-                coordinates_used["{},{}".format(cos[0],cos[1])] = 1
+                coordinates_used[string] = 1
     
 thing = [x for x in coordinates_used if coordinates_used[x] > 1]
 print(len(thing))

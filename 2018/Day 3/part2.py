@@ -14,7 +14,7 @@ for x in inputt:
     for l in range(0, length):
         for w in range(0, width):
             cos = [coordinates[0]+l,coordinates[1]+w]
-            string = "{},{}".format(cos[0],cos[1])
+            string = "({},{})".format(cos[0],cos[1])
             if string in coordinates_used:
                 if coordinates_used[string] in exclusive:
                     exclusive.remove(coordinates_used[string])
