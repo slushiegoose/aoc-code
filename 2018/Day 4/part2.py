@@ -36,7 +36,7 @@ def key(x):
 
 inputt.sort(key=key)
 
-print(inputt)
+# print(inputt)
 guard = None
 sleep = True
 minute = None
@@ -44,13 +44,13 @@ minute = None
 for x in inputt:
     if "#" in x:
         guard = x.split("#")[1].split(" ")[0]
-        print(guard + "guard")
+        # print(guard + "guard")
     elif "asleep" in x:
         minute = int(x.split(":")[1].split("]")[0])
-        print("min",minute)
+        # print("min",minute)
     elif "wakes" in x:
         new_min = int(x.split(":")[1].split("]")[0])
-        print("new_min",new_min)
+        # print("new_min",new_min)
         length = new_min - minute
         if guard in guards_len:
             guards_len[guard]+=length

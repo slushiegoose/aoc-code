@@ -1,3 +1,4 @@
+
 with open("Day 4.txt","r") as f: inputt=f.readlines()
 
 # inputt = """[1518-11-01 00:00] Guard #10 begins shift
@@ -36,7 +37,7 @@ def key(x):
 
 inputt.sort(key=key)
 
-print(inputt)
+# print(inputt)
 guard = None
 sleep = True
 minute = None
@@ -44,13 +45,13 @@ minute = None
 for x in inputt:
     if "#" in x:
         guard = x.split("#")[1].split(" ")[0]
-        print(guard + "guard")
+        # print(guard + "guard")
     elif "asleep" in x:
         minute = int(x.split(":")[1].split("]")[0])
-        print("min",minute)
+        # print("min",minute)
     elif "wakes" in x:
         new_min = int(x.split(":")[1].split("]")[0])
-        print("new_min",new_min)
+        # print("new_min",new_min)
         length = new_min - minute
         if guard in guards_len:
             guards_len[guard]+=length
@@ -66,17 +67,14 @@ for x in inputt:
 
 
 maximum = max(guards_len.values())
-guard = [x for x in guards_len if guards_len[x]==maximum][0]
-print(guards_len)
+guard = [x for x in guards_len if guards_len[x]==maximum]
+# print(guard)
 # print(guard)
 
 
-max_min = max(guards_min[guard].values())
-min = [x for x in guards_min[guard] if guards_min[guard][x]==max_min][0]
-print(guards_min)
-print(max_min)
-print(int(guard)*min)
-
+max_min = max(guards_min[guard[0]].values())
+min = [x for x in guards_min[guard[0]] if guards_min[guard[0]][x]==max_min]
+# print(min)
 
 
 

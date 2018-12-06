@@ -1,4 +1,4 @@
-inputt = open("Day 2.txt","r").readlines()
+inputt = open(path + "Day 2.txt","r").readlines()
 
 def section_1():
     for p in range(0, len(inputt)):
@@ -14,7 +14,7 @@ def section_1():
 
 x,y = section_1()
 
-print(x,y)
+# print(x,y)
 q=""
 for z in range(0, len(x)):
     if x[z] == y[z]:
