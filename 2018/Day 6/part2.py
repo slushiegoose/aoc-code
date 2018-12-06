@@ -1,5 +1,5 @@
 
-with open(path + "Day 6.txt","r") as f: inputt = f.readlines()
+with open("Day 6.txt","r") as f: inputt = f.readlines()
 # with open("test.txt","r") as f: inputt = f.readlines()
 # inputt = """1, 1
 # 1, 6
