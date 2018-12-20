@@ -1,4 +1,4 @@
-with open("Day 5.txt","r") as f: hh=f.read().strip()
+with open("josh.txt","r") as f: hh=f.read().strip()
 # inputt = "dabAcCaCBAcCcaDA"
 
 p = 0
@@ -29,6 +29,6 @@ def solve(inputt):
             p=0
             solved = True
             continue
-    # return len(inputt)
+    return len(inputt)
 
 print(solve(hh))
